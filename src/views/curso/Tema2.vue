@@ -509,8 +509,184 @@
 </template>
 
 <script>
+import Actividad from '@/components/actividad/Actividad.vue'
 export default {
-  name: 'Tema2',
+  name: 'Tema4',
+  components: {
+    Actividad,
+  },
+  data() {
+    return {
+      cuestionario: {
+        tema: 'Herramientas colaborativas para la construcción de paz',
+        titulo: 'Ponte a prueba',
+        introduccion:
+          'Demuestra lo que aprendiste en esta unidad y pon a prueba tus conocimientos.',
+        barajarPreguntas: true,
+        preguntas: [
+          {
+            id: 1,
+            texto:
+              '¿Cuál es el principal objetivo de la visualización de datos en un entorno organizacional?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Embellecer informes con gráficos llamativos',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Embellecer informes con gráficos llamativos',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto: 'Eliminar la necesidad de análisis estadístico',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto: 'Reemplazar la comunicación verbal',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+            mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+          },
+          {
+            id: 2,
+            texto:
+              'Si vas a mostrar un gráfico en una reunión y quieres que se entienda rápido y sin distracciones, ¿qué deberías evitar?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Usar solo los datos importantes',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Llenar el gráfico con formas y colores innecesarios',
+                esCorrecta: true,
+              },
+              {
+                id: 'c',
+                texto: 'Mostrar solo una parte de los resultados',
+                esCorrecta: false,
+              },
+              {
+                id: 'd',
+                texto: 'Usar colores planos y contrastes simples',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+            mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+          },
+          {
+            id: 3,
+            texto:
+              '¿Cuál de las siguientes herramientas permite la creación gratuita de dashboards interactivos en la nube?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Power BI Pro',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Tableau Desktop',
+                esCorrecta: false,
+              },
+              {
+                id: 'c',
+                texto: 'Google Looker Studio',
+                esCorrecta: true,
+              },
+              {
+                id: 'd',
+                texto: 'SAP Analytics Cloud',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+            mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+          },
+          {
+            id: 4,
+            texto:
+              '¿Qué técnica mejora la comprensión de hallazgos mediante la conexión de datos con una narrativa estructurada?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Análisis predictivo',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Data Mining',
+                esCorrecta: false,
+              },
+              {
+                id: 'c',
+                texto: 'Storytelling con datos',
+                esCorrecta: true,
+              },
+              {
+                id: 'd',
+                texto: 'Algoritmos de agrupamiento',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+            mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+          },
+          {
+            id: 5,
+            texto:
+              '¿Cuál es un riesgo común en la visualización de datos que afecta la interpretación?',
+            imagen: '',
+            barajarRespuestas: true,
+            opciones: [
+              {
+                id: 'a',
+                texto: 'Uso de un título descriptivo',
+                esCorrecta: false,
+              },
+              {
+                id: 'b',
+                texto: 'Exceso de contraste de colors',
+                esCorrecta: false,
+              },
+              {
+                id: 'c',
+                texto: 'Ejes mal escalados',
+                esCorrecta: true,
+              },
+              {
+                id: 'd',
+                texto: 'Falta de iconografía',
+                esCorrecta: false,
+              },
+            ],
+            mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+            mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+          },
+        ],
+        mensaje_final_aprobado:
+          '¡Felicidades! Has superado la prueba con éxito.',
+        mensaje_final_reprobado:
+          'Te recomendamos repasar nuevamente la unidad para reforzar los conceptos clave antes de volver a intentarlo.',
+      },
+    }
+  },
   mounted() {
     this.$nextTick(() => {
       this.$aosRefresh()
@@ -519,4 +695,7 @@ export default {
 }
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+.bg-color-actividad
+  background-color: #EBF1F5
+</style>
